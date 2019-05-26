@@ -1,0 +1,30 @@
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 25 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 25 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 25 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 25 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 25 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 25 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 25 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 25 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 25 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 25 159  
