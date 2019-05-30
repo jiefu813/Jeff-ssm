@@ -104,21 +104,6 @@ function refreshTab() {
     }
 }
 
-function logout(){
-    $.messager.confirm('提示','确定要退出?',function(r){
-        if (r){
-            progressLoad();
-            $.post('/logout', function(result) {
-                result = $.parseJSON(result);
-                if(result.success){
-                    progressClose();
-                    window.location.href = '/';
-                }
-            }, 'text');
-        }
-    });
-}
-
 function editUserPwd() {
     var t = parent.$.modalDialog({
         title : '修改密码',
@@ -128,8 +113,6 @@ function editUserPwd() {
         buttons : [ {
             text : '确定',
             handler : function() {
-//                var f = parent.$.modalDialog.handler.find('#detailForm');
-//                f.submit();
             	var fm = parent.$.modalDialog.handler.find('#detailForm');
             	fm.form('submit', {
             		onSubmit : function() {
@@ -142,30 +125,16 @@ function editUserPwd() {
             		},
             		success : function(data) {
             			progressClose();
-            			var result = $.parseJSON(data);
-            			if (result.success) {
-                            $.messager.alert('提示', result.msg, 'info');
-            				/*$.messager.show( {
-            					title : '提示',
-            					msg : result.msg,
-            					showType:'show'
-            				});*/
-            				// reload the list data
+            			if (data=="succeed") {
+                            $.messager.alert('提示', "修改密码成功", 'info');
             				$('#grid').datagrid('reload');
             				t.dialog('close');
-            				
-            			} else {
-                            $.messager.alert('提示', result.msg, 'error');
-            				/*$.messager.show( {
-            						title : '错误',
-            						msg : result.msg,
-            						width:'300px',
-            						height:'150px',
-            						timeout:0,
-            						showType:'show'
-            				});*/
+            			}else if(data=="passwordError"){
+                            $.messager.alert('提示', "旧密码错误", 'error');
+                        } else {
+                            $.messager.alert('提示', "修改密码失败", 'error');
             			}
-            		}
+                    }
             	});
             }
         } ]

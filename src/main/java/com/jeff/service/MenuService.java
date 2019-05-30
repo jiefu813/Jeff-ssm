@@ -1,6 +1,7 @@
 package com.jeff.service;
 
 import com.jeff.common.entity.Tree;
+import com.jeff.entity.Menu;
 
 import java.util.List;
 
@@ -10,4 +11,6 @@ import java.util.List;
  */
 public interface MenuService {
     List<Tree> getMenuTree();
+
+    List<Menu> getAllMenu();
 }

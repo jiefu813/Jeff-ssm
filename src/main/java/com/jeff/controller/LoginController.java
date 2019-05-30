@@ -4,8 +4,12 @@ import com.jeff.entity.User;
 import com.jeff.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.security.auth.Subject;
+import javax.servlet.http.HttpSession;
 
 /**
  * @author Jeff
@@ -26,9 +30,10 @@ public class LoginController {
 
     @RequestMapping("login")
     @ResponseBody
-    public String login(User u){
+    public String login(User u, HttpSession session){
         User user=userService.login(u);
         if(null!=user){
+            session.setAttribute("user",user);
             return "success";
         }
         return "error";
@@ -38,6 +43,12 @@ public class LoginController {
     public  String index(){
 
         return "sys/index";
+    }
+
+    @RequestMapping("/logout")
+    public Object logout() {
+
+        return "redirect:loginPage";
     }
 
 }

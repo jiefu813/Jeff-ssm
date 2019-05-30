@@ -1,5 +1,7 @@
 package com.jeff.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -25,6 +27,7 @@ public class Menu implements Serializable {
 	/**
 	 * 父菜单ID，一级菜单为0
 	 */
+    @JsonProperty("_parentId")
 	private Long parentId;
 	/**
 	 * 排序
@@ -41,6 +44,7 @@ public class Menu implements Serializable {
 	/**
 	 * 图标
 	 */
+    @JsonProperty("iconCls")
 	private String icon;
 	/**
 	 * 创建时间

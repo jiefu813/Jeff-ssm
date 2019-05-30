@@ -5,21 +5,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>后台管理平台</title>
+    <title>后台管理系统</title>
+    <%@ include file="../common/base.jsp" %>
     <link rel="icon" type="image/x-icon" href="${path}/static/images/jie.png" />
     <link rel="stylesheet" type="text/css" href="${path}/static/css/index/main.css">
     <link rel="stylesheet" type="text/css" href="${path}/static/css/index/style.css">
-    <!--EasyUI-->
-    <link rel="stylesheet" type="text/css" href="${path}/static/js/plugins/easyui/themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="${path}/static/js/plugins/easyui/themes/icon.css">
-    <link rel="stylesheet" type="text/css" href="${path}/static/js/plugins/easyui/themes/color.css">
-    <link rel="stylesheet" type="text/css" href="${path}/static/css/index/common.css">
-    <link rel="stylesheet" type="text/css" href="${path}/static/css/index/icon.css">
-    <script type="text/javascript" src="${path}/static/js/plugins/easyui/jquery.min.js"></script>
-    <script type="text/javascript" src="${path}/static/js/plugins/easyui/jquery.easyui.min.js"></script>
-    <%-- [扩展JS] --%>
-    <script type="text/javascript" src="${path}/static/js/index/arrayToTree.js"></script>
-    <script type="text/javascript" src="${path}/static/js/index/extJs.js"></script>
     <script type="text/javascript" src="${path}/static/js/index/main.js"></script>
 </head>
 <body>
@@ -31,7 +21,7 @@
             <div class="head">
                 <table>
                   <tr>
-                    <td width="300px" align="left" style="font-size: 20px;">微信平台管理系统</td>
+                    <td width="300px" align="left" style="font-size: 20px;">后台管理系统</td>
                     <td></td>
                     <td width="400px" align="right">
                         <table >
@@ -41,13 +31,13 @@
                                     <div class="myInfoDiv" data-options="border:false">
                                         <a id="myInfo" href="#" class="easyui-menubutton myInfo" data-options="menu:'#mm1'" onclick="showMenu();">
                                             <img align=absmiddle style="width: 18px;" alt="" src="${path}/static/images/jie.png">
-                                            admin
+                                            ${user.name}
                                         </a>
                                     </div>
                                     <div id="mm1" style="width: 100px;">
                                         <div data-options="iconCls:'glyphicon-pencil'"  onclick='editUserPwd()'>修改密码</div>
                                         <div class="menu-sep"></div>
-                                        <div data-options="iconCls:'glyphicon-log-out'"	onclick="logout()">退出</div>
+                                        <div data-options="iconCls:'glyphicon-log-out'" onclick="javascript:location.href='${path}/logout' ">退出</div>
                                     </div>
                                 </td>
                             </tr>

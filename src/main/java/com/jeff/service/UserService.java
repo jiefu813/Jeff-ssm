@@ -9,4 +9,6 @@ public interface UserService {
     List<User> getUserList();
 
     User login(User user);
+
+    boolean updatePwd(User user);
 }

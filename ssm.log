@@ -430,3 +430,201 @@ org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159
 org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
 org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
 org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user where login_name=? and password=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: admin(String), 123456(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: update user set password=? where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 654321(String), 1(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==    Updates: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user where login_name=? and password=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: admin(String), 123456(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 0 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user where login_name=? and password=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: admin(String), 654321(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user where login_name=? and password=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: admin(String), 654321(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user where login_name=? and password=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: admin(String), 654321(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user where login_name=? and password=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: admin(String), 654321(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='RESOURCE_MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 34 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 153 159  

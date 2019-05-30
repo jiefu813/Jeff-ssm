@@ -12,5 +12,6 @@ import java.util.List;
 public interface MenuMapper {
     @Select("select * from menu where type='RESOURCE_MENU'")
     List<Menu> getAllMenu();
-
+    @Select("select * from menu")
+    List<Menu> getAllMenuAndButton();
 }

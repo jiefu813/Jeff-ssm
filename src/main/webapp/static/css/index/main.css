@@ -19,10 +19,10 @@
 /* .layout-expand-north, .layout-expand-west{height: 0px;}  */
 
 .tree-expanded{
-    background: url('images/tree_icons_main.png') no-repeat -18px 0px;
+    background: url('/static/images/index/tree_icons_main.png') no-repeat -18px 0px;
 }
 .tree-collapsed {
-    background: url('images/tree_icons_main.png') no-repeat 0px 0px;
+    background: url('/static/images/index/tree_icons_main.png') no-repeat 0px 0px;
 }
 .tree-icon {
     color: #BFBFBF;

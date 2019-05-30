@@ -35,4 +35,10 @@ public class MenuServiceImpl implements MenuService {
         }
         return trees;
     }
+
+    @Override
+    public List<Menu> getAllMenu() {
+
+        return menuMapper.getAllMenuAndButton();
+    }
 }
