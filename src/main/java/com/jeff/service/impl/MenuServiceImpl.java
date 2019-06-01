@@ -41,4 +41,28 @@ public class MenuServiceImpl implements MenuService {
 
         return menuMapper.getAllMenuAndButton();
     }
+
+    @Override
+    public boolean save(Menu menu) {
+
+        return menuMapper.addMenu(menu)>0;
+    }
+
+    @Override
+    public Menu getById(Long id) {
+
+        return menuMapper.getById(id);
+    }
+
+    @Override
+    public boolean updateById(Menu menu) {
+
+        return menuMapper.updateById(menu)>0;
+    }
+
+    @Override
+    public boolean removeById(Long id) {
+
+        return menuMapper.removeById(id)>0;
+    }
 }

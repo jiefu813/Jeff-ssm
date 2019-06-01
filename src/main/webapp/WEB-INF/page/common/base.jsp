@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="${path}/static/css/index/icon.css">
     <script type="text/javascript" src="${path}/static/js/plugins/easyui/jquery.min.js"></script>
     <script type="text/javascript" src="${path}/static/js/plugins/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="${path}/static/js/common/jquery.easyui.extend.validatebox.js"></script>
+    <script type="text/javascript" src="${path}/static/js/plugins/easyui/locale/easyui-lang-zh_CN.js"></script>
     <%-- [扩展JS] --%>
     <script type="text/javascript" src="${path}/static/js/index/arrayToTree.js"></script>
     <script type="text/javascript" src="${path}/static/js/index/extJs.js"></script>

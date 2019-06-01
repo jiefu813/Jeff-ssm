@@ -13,4 +13,12 @@ public interface MenuService {
     List<Tree> getMenuTree();
 
     List<Menu> getAllMenu();
+
+    boolean save(Menu menu);
+
+    Menu getById(Long id);
+
+    boolean updateById(Menu menu);
+
+    boolean removeById(Long id);
 }

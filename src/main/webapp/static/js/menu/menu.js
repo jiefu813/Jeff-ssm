@@ -26,7 +26,7 @@ function loadSuccess_on(result) {
 function opt_formatter(value, row, index) {
     var str = '';
     str += '&nbsp;&nbsp;';
-    str += $.formatString('<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:\'glyphicon-zoom-in icon-blue\',plain:true" onclick="view_on(\'{0}\')">查看</a>', row.id);
+    /*str += $.formatString('<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:\'glyphicon-zoom-in icon-blue\',plain:true" onclick="view_on(\'{0}\')">查看</a>', row.id);*/
     str += $.formatString('<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:\'glyphicon-pencil icon-blue\'" onclick="edit_on(\'{0}\');" >编辑</a>', row.id);
     str += '&nbsp;&nbsp;|&nbsp;&nbsp;';
     str += $.formatString('<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:\'glyphicon-trash icon-red\'" onclick="del_on(\'{0}\');" >删除</a>', row.id);
@@ -35,7 +35,7 @@ function opt_formatter(value, row, index) {
 
 //新增
 function add_on() {
-    var url = '${path }/resource/addPage';
+    var url = 'addPage';
     //如采用默认宽度和高度,参数设置为undefined
     var width=undefined;
     var height =undefined;
@@ -48,7 +48,7 @@ function closeWindowView_on() {
 }
 
 function view_on(pkid) {
-    if (pkid != undefined) {
+    if (pkid) {
         //选中记录
         $('#grid').datagrid('getSelected', pkid);
         var url = '${path }/resource/viewPage?id=' + pkid;
@@ -64,10 +64,10 @@ function view_on(pkid) {
 
 //编辑
 function edit_on(pkid) {
-    if (pkid != undefined) {
+    if (pkid) {
         //选中记录
         $('#grid').treegrid('select', pkid);
-        var url = '${path }/resource/editPage?id=' + pkid;
+        var url = 'editPage?id=' + pkid;
         //如采用默认宽度和高度,参数设置为undefined
         var width=undefined;
         var height =undefined;
@@ -79,20 +79,18 @@ function edit_on(pkid) {
 
 //删除
 function del_on(pkid) {
-    if (pkid != undefined) {
+    if (pkid) {
         $.messager.confirm('询问', '您是否要删除该数据记录吗？', function(b) {
             if (b) {
                 progressLoad();
-                $.post('${path }/resource/delete', {
+                $.post('delete', {
                     id : pkid
-                }, function(result) {
-                    //alert(result.success);
-                    result = $.parseJSON(result);
-                    if (result.success) {
-                        $.messager.alert('提示', result.msg, 'info');
+                }, function(data) {
+                    if (data=="success") {
+                        $.messager.alert('提示', "删除成功", 'info');
                         $('#grid').treegrid('reload');    // reload the user data
                     }else{
-                        $.messager.alert('提示', result.msg, 'info');
+                        $.messager.alert('提示', "删除失败", 'info');
                     }
                     progressClose();
                 }, 'text');
@@ -132,11 +130,10 @@ function save_on() {
         },
         success : function(data) {
             progressClose();
-            var result = $.parseJSON(data);
-            if (result.success) {
+            if (data=="success") {
                 $.messager.show( {
                     title : '提示',
-                    msg : result.msg,
+                    msg : "操作成功",
                     showType:'show'
                 });
                 $('#grid').treegrid('reload');
@@ -145,7 +142,7 @@ function save_on() {
             } else {
                 $.messager.show( {
                     title : '错误',
-                    msg : result.msg,
+                    msg : "操作失败",
                     width:'300px',
                     height:'150px',
                     timeout:0,

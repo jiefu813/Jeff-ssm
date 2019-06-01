@@ -56,9 +56,9 @@
 		<tx:attributes>
 			<!-- 哪些方法需要有事务控制 -->
 			<!-- 方法以ins 开头事务管理 -->
-			<tx:method name="ins*" />
-			<tx:method name="del*" />
-			<tx:method name="upd*" />
+			<tx:method name="save*" />
+			<tx:method name="remove*" />
+			<tx:method name="update*" />
 			<!-- 数据库此事务为只读事务,建议查询方法时使用 -->
 			<tx:method name="*" read-only="true" />
 		</tx:attributes>
