@@ -1,10 +1,11 @@
 package com.jeff.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.jeff.common.entity.Datagrid;
-import com.jeff.common.entity.Tree;
-import com.jeff.entity.Menu;
+import com.jeff.entity.Role;
 import com.jeff.entity.User;
-import com.jeff.service.MenuService;
+import com.jeff.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,53 +17,46 @@ import java.util.List;
 
 /**
  * @author Jeff
- * @createTime 2019-05-29 22:38
+ * @createTime 2019-06-01 17:25
  */
 @Controller
-@RequestMapping("menu")
-public class MenuController {
+@RequestMapping("role")
+public class RoleController {
 
     @Autowired
-    private MenuService menuService;
+    private RoleService roleService;
 
-    @RequestMapping("tree")
-    @ResponseBody
-    public List<Tree> tree() {
-
-        return menuService.getMenuTree();
-    }
-
-    @RequestMapping("manager")
+    @RequestMapping(value = "manager")
     public String manager(Model model, @RequestParam(required = false) String PageName,
                           @RequestParam(required = false, defaultValue = "glyphicon-list") String PageIcon) {
         model.addAttribute("PageName", PageName);
         model.addAttribute("PageIcon", PageIcon);
-        return "sys/menu/menuList";
+        return "sys/role/roleList";
     }
 
-    @RequestMapping("treeGrid")
+    @RequestMapping("/dataGrid")
     @ResponseBody
-    public Object treeGrid() {
-
-        List<Menu> menuList = menuService.getAllMenu();
-
-        return new Datagrid(menuList, menuList.size());
+    public Object dataGrid(Integer page, Integer rows,Role role) {
+        PageHelper.startPage(page, rows);
+        List<Role> roleList = roleService.getRoleList(role);
+        PageInfo<Role> pageInfo = new PageInfo<>(roleList);
+        return new Datagrid(pageInfo.getList(), pageInfo.getTotal());
     }
 
-    @RequestMapping("addPage")
+    @RequestMapping("/addPage")
     public String addPage() {
-        return "sys/menu/menuAdd";
+        return "sys/role/roleAdd";
     }
 
-    @RequestMapping("add")
+    @PostMapping("/add")
     @ResponseBody
-    public String add(Menu menu, HttpSession session) {
+    public String add(Role role, HttpSession session) {
         User user = (User) session.getAttribute("user");
         if (null != user) {
-            menu.setCreateName(user.getLoginName());
+            role.setCreateName(user.getLoginName());
         }
-        menu.setCreateTime(new Date());
-        if (menuService.save(menu)) {
+        role.setCreateTime(new Date());
+        if (roleService.save(role)) {
             return "success";
         }
         return "error";
@@ -70,20 +64,20 @@ public class MenuController {
 
     @RequestMapping("/editPage")
     public String editPage(Model model, Long id) {
-        Menu menu = menuService.getById(id);
-        model.addAttribute("menu", menu);
-        return "sys/menu/menuEdit";
+        Role role = roleService.getById(id);
+        model.addAttribute("role", role);
+        return "sys/role/roleEdit";
     }
 
     @RequestMapping("/edit")
     @ResponseBody
-    public String edit(Menu menu,HttpSession session) {
+    public String edit(Role role,HttpSession session) {
         User user = (User) session.getAttribute("user");
         if (null != user) {
-            menu.setModifyName(user.getLoginName());
+            role.setModifyName(user.getLoginName());
         }
-        menu.setModifyTime(new Date());
-        if(menuService.updateById(menu)){
+        role.setModifyTime(new Date());
+        if (roleService.updateById(role)) {
             return "success";
         }
         return "error";
@@ -92,10 +86,9 @@ public class MenuController {
     @RequestMapping("/delete")
     @ResponseBody
     public String delete(Long id) {
-        if(menuService.removeById(id)){
+        if (roleService.removeById(id)) {
             return "success";
         }
         return "error";
     }
-
 }

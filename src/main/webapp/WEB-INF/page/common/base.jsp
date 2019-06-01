@@ -19,6 +19,7 @@
     <%-- [扩展JS] --%>
     <script type="text/javascript" src="${path}/static/js/index/arrayToTree.js"></script>
     <script type="text/javascript" src="${path}/static/js/index/extJs.js"></script>
+    <script type="text/javascript" src="${path}/static/js/common/commonUtils.js"></script>
 </head>
 <body>
 
