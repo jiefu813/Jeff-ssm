@@ -33,5 +33,19 @@
         <property name="realm" ref="userRealm"/>
     </bean>
     <!-- 配置自定义realm -->
-    <bean id="userRealm" class="com.jeff.common.shiro.UserRealm"></bean>
+    <bean id="userRealm" class="com.jeff.common.shiro.UserRealm">
+        <!-- 将凭证匹配器设置到realm 中，realm 按照凭证匹配器的要求进行散列 -->
+        <property name="credentialsMatcher" ref="credentialsMatcher" />
+    </bean>
+    <!-- 凭证匹配器 -->
+    <bean id="credentialsMatcher" class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+        <!--算法名称-->
+        <property name="hashAlgorithmName" value="md5" />
+        <!--迭代次数-->
+        <property name="hashIterations" value="3" />
+    </bean>
+    <!-- 配置logout过滤器，默认退出后跳转到根路径下，如果需要改变则重新配置logout过滤器 -->
+    <!--<bean id="logout" class="org.apache.shiro.web.filter.authc.LogoutFilter">
+        <property name="redirectUrl" value="/loginPage"></property>
+    </bean>-->
 </beans>

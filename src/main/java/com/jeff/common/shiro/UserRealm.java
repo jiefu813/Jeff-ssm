@@ -9,6 +9,7 @@ import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -34,6 +35,6 @@ public class UserRealm extends AuthorizingRealm {
         // 根据用户名到数据库中取出用户信息如果查询不到返回null
         User user = userService.selectUserByLoginName(username);
         // 返回认证信息
-        return new SimpleAuthenticationInfo(user, user.getPassword(), this.getName());
+        return new SimpleAuthenticationInfo(user, user.getPassword(), ByteSource.Util.bytes(user.getSalt()), this.getName());
     }
 }
