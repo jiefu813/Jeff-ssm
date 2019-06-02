@@ -13,7 +13,7 @@ public interface UserService {
 
     boolean updatePwd(User user);
 
-    int selectCountByLoginName(String loginName);
+    User selectUserByLoginName(String loginName);
 
     boolean save(User user);
 

@@ -2,13 +2,18 @@ package com.jeff.controller;
 
 import com.jeff.entity.User;
 import com.jeff.service.UserService;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.DisabledAccountException;
+import org.apache.shiro.authc.IncorrectCredentialsException;
+import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.security.auth.Subject;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -22,33 +27,37 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
+    //登陆页面
     @RequestMapping("loginPage")
     public String loginPage(){
 
         return "sys/login";
     }
 
-    @RequestMapping("login")
+    //登陆
+    @PostMapping("login")
     @ResponseBody
-    public String login(User u, HttpSession session){
-        User user=userService.login(u);
-        if(null!=user){
-            session.setAttribute("user",user);
+    public String login(User u){
+        Subject user = SecurityUtils.getSubject();
+        UsernamePasswordToken token=new UsernamePasswordToken(u.getLoginName(),u.getPassword());
+        try {
+            user.login(token);
             return "success";
+        } catch (UnknownAccountException e) {
+            return "accountNotExist ";
+        } catch (DisabledAccountException e) {
+            return "accountNotEnabled";
+        } catch (IncorrectCredentialsException e) {
+            return "passwordError";
+        } catch (Throwable e) {
+            return "error";
         }
-        return "error";
     }
 
-    @RequestMapping("index")
+    @RequestMapping(value = {"/","index"})
     public  String index(){
 
         return "sys/index";
-    }
-
-    @RequestMapping("/logout")
-    public Object logout() {
-
-        return "redirect:loginPage";
     }
 
 }

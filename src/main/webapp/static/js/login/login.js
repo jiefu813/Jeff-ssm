@@ -29,6 +29,15 @@ function submitForm(){
             success: function(data){
                 if (data=="success") {
                     window.location = 'index';
+                }else if(data=="accountNotEnabled"){
+                    $.messager.show( {
+                        title : '提示',
+                        msg : '账号未启用',
+                        width:'300px',
+                        height:'150px',
+                        timeout:3000,
+                        showType:'show'
+                    });
                 }else{
                     $.messager.show( {
                         title : '提示',

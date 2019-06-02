@@ -33,9 +33,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public int selectCountByLoginName(String loginName) {
+    public User selectUserByLoginName(String loginName) {
 
-        return userMapper.selectCountByLoginName(loginName);
+        return userMapper.selectUserByLoginName(loginName);
     }
 
     @Override

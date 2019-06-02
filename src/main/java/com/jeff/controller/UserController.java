@@ -79,13 +79,13 @@ public class UserController {
     @RequestMapping("/add")
     @ResponseBody
     public String add(User user, HttpSession session) {
-        int count = userService.selectCountByLoginName(user.getLoginName());
-        if (count > 0) {
+        User u = userService.selectUserByLoginName(user.getLoginName());
+        if (null!=u) {
             return "alreadyExists";
         }
-        User u = (User) session.getAttribute("user");
-        if (null != u) {
-            user.setCreateName(u.getLoginName());
+        User currentUser = (User) session.getAttribute("user");
+        if (null != currentUser) {
+            user.setCreateName(currentUser.getLoginName());
         }
         user.setCreateTime(new Date());
         if (userService.save(user)) {

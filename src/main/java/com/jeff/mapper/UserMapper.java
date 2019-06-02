@@ -18,8 +18,8 @@ public interface UserMapper {
     int updatePwd(User user);
     @Insert("insert into user values(default,#{loginName},#{password},#{salt},#{sex},#{status},#{name},#{nickName},#{phone},#{email},#{birthday},#{headimgUrl},#{createTime},#{createName},#{modifyTime},#{modifyName})")
     int save(User user);
-    @Select("select count(*) from user where login_name=#{loginName}")
-    int selectCountByLoginName(String loginName);
+    @Select("select * from user where login_name=#{loginName}")
+    User selectUserByLoginName(String loginName);
     @Update("update user set password=#{password},sex=#{sex},status=#{status},name=#{name},nick_name=#{nickName},phone=#{phone},email=#{email},birthday=#{birthday},headimg_url=#{headimgUrl},modify_time=#{modifyTime},modify_name=#{modifyName} where id=#{id}")
     int updateById(User user);
     @Select("select * from user where id=#{id}")
