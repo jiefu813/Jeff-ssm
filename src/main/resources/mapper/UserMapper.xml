@@ -3,4 +3,20 @@
 
 <mapper namespace="com.jeff.mapper.UserMapper">
 
+    <select id="getUserList" parameterType="Map" resultType="User">
+        select * from user
+        <where>
+            <if test="loginName != null and loginName != ''">
+                login_name like CONCAT('%',#{loginName},'%')
+            </if>
+            <if test="startTime != null and startTime != ''">
+                <![CDATA[ and create_time >= #{startTime} ]]>
+            </if>
+            <if test="endTime != null and endTime != ''">
+                <![CDATA[ and create_time <= #{endTime} ]]>
+            </if>
+        </where>
+        order by id
+    </select>
+
 </mapper>

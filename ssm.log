@@ -2738,3 +2738,559 @@ org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159
 org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from role order by seq LIMIT ?  159  
 org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
 org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 3 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 10 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?, ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer), 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 10 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?, ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 20(Integer), 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 5 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?, ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer), 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 10 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 10 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 10 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 10 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 10 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 10 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 5 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 5 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 5 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 5 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 5 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 5 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 5 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select count(*) from user where login_name=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: cs1(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: insert into user values(default,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: cs1(String), 123456(String), null, SECRECY(String), ENABLE(String), (String), (String), (String), (String), (String), null, null, null, null, null 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select count(*) from user where login_name=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: cs1(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: insert into user values(default,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: cs1(String), 123456(String), null, SECRECY(String), ENABLE(String), (String), (String), (String), (String), (String), null, null, null, null, null 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==    Updates: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select count(*) from user where login_name=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: cs1(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 6 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select count(*) from user where login_name=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: cs2(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: insert into user values(default,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: cs2(String), 123456(String), null, WOMAN(String), DISABLE(String), 小测2(String), 测试2(String), 13000000000(String), ce@qq.com(String), 2019-06-02(String), null, null, null, null, null 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==    Updates: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 7 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 7 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select count(*) from user where login_name=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: cs3(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: insert into user values(default,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: cs3(String), 123456(String), null, MAN(String), DISABLE(String), 小测3(String), 测试3(String), 13000000001(String), cs3@qq.com(String), 2019-06-15(String), null, 2019-06-02 16:54:40.059(Timestamp), null, null, null 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==    Updates: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 221(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 221(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 220(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 221(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: update user set password=?,sex=?,status=?,name=?,nickName=?,phone=?,email=?,birthday=?,headimgUrl=?,modify_time=?,modify_name=? where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: (String), WOMAN(String), ENABLE(String), 小测33(String), 测试13(String), 13000000013(String), cs13@qq.com(String), 2019-06-13(String), null, 2019-06-02 16:55:42.41(Timestamp), null, 221(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 220(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 221(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: update user set password=?,sex=?,status=?,name=?,nick_name=?,phone=?,email=?,birthday=?,headimg_url=?,modify_time=?,modify_name=? where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: (String), SECRECY(String), ENABLE(String), 小测13(String), 测试13(String), 13000000013(String), cs13@qq.com(String), 2019-06-13(String), null, 2019-06-02 16:57:34.489(Timestamp), null, 221(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 221(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: update user set password=?,sex=?,status=?,name=?,nick_name=?,phone=?,email=?,birthday=?,headimg_url=?,modify_time=?,modify_name=? where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: (String), SECRECY(String), ENABLE(String), 小测13(String), 测试13(String), 13000000013(String), cs13@qq.com(String), 2019-06-13(String), null, 2019-06-02 17:05:33.062(Timestamp), null, 221(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 221(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 221(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: update user set password=?,sex=?,status=?,name=?,nick_name=?,phone=?,email=?,birthday=?,headimg_url=?,modify_time=?,modify_name=? where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: (String), WOMAN(String), DISABLE(String), 小测33(String), 测试33(String), 13000000033(String), cs33@qq.com(String), 2019-06-23(String), null, 2019-06-02 17:11:36.546(Timestamp), null, 221(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==    Updates: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user WHERE t.create_time >= ? AND t.create_time <= ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: (String), (String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user WHERE name LIKE CONCAT('%', ?, '%')  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 1(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user WHERE loginName LIKE CONCAT('%', ?, '%')  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 1(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user WHERE loginName LIKE CONCAT('%', ?, '%')  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 1(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user WHERE login_name LIKE CONCAT('%', ?, '%')  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 1(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user WHERE login_name like CONCAT('%',?,'%') order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 1(String), 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select count(*) from user where login_name=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: cs11(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: insert into user values(default,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: cs11(String), 123123(String), null, SECRECY(String), ENABLE(String), (String), (String), (String), (String), (String), null, 2019-06-02 17:22:35.219(Timestamp), null, null, null 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==    Updates: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 9 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user WHERE login_name LIKE CONCAT('%', ?, '%')  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 1(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user WHERE login_name like CONCAT('%',?,'%') order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 1(String), 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 2 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 9 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 9 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user WHERE t.create_time >= ? AND t.create_time <= ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 2019-03-01 17:24:17(String), 2019-04-01 17:24:27(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 9 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user WHERE create_time >= ? AND create_time <= ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 2019-03-01 17:25:17(String), 2019-03-31 17:25:24(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user WHERE create_time >= ? and create_time <= ? order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 2019-03-01 17:25:17(String), 2019-03-31 17:25:24(String), 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 5 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user WHERE login_name LIKE CONCAT('%', ?, '%') AND create_time >= ? AND create_time <= ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: l(String), 2019-03-01 17:25:17(String), 2019-03-31 17:25:24(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user WHERE login_name like CONCAT('%',?,'%') and create_time >= ? and create_time <= ? order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: l(String), 2019-03-01 17:25:17(String), 2019-03-31 17:25:24(String), 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 9 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user WHERE login_name LIKE CONCAT('%', ?, '%')  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 1(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user WHERE login_name like CONCAT('%',?,'%') order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 1(String), 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 2 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 9 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: delete from user where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 222(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==    Updates: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 8 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: delete from user where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 221(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==    Updates: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 7 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: delete from user where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 220(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==    Updates: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 6 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: delete from user where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 219(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==    Updates: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 5 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 5 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM role  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from role order by seq LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 3 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 20 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: delete from menu where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 472(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==    Updates: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 19 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: delete from menu where id=?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 467(Long) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==    Updates: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 18 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu where type='MENU'  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 4 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from menu  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 18 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM role  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from role order by seq LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 3 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 5 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user WHERE create_time >= ? AND create_time <= ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 2019-03-26 17:31:43(String), 2019-06-02 17:32:01(String) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user WHERE create_time >= ? and create_time <= ? order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 2019-03-26 17:31:43(String), 2019-06-02 17:32:01(String), 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 3 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: SELECT count(0) FROM user  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters:  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 1 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==>  Preparing: select * from user order by id LIMIT ?  159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger ==> Parameters: 10(Integer) 159  
+org.apache.ibatis.logging.jdbc.BaseJdbcLogger <==      Total: 5 159  

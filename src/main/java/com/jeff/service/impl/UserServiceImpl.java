@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -14,9 +15,9 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public List<User> getUserList() {
+    public List<User> getUserList(Map<String, Object> condition) {
 
-        return userMapper.getUserList();
+        return userMapper.getUserList(condition);
     }
 
     @Override
@@ -29,5 +30,31 @@ public class UserServiceImpl implements UserService {
     public boolean updatePwd(User user) {
 
         return userMapper.updatePwd(user)>0;
+    }
+
+    @Override
+    public int selectCountByLoginName(String loginName) {
+
+        return userMapper.selectCountByLoginName(loginName);
+    }
+
+    @Override
+    public boolean save(User user) {
+        return userMapper.save(user)>0;
+    }
+
+    @Override
+    public boolean updateById(User user) {
+        return userMapper.updateById(user)>0;
+    }
+
+    @Override
+    public User getById(Long id) {
+        return userMapper.getById(id);
+    }
+
+    @Override
+    public boolean removeById(Long id) {
+        return userMapper.removeById(id)>0;
     }
 }

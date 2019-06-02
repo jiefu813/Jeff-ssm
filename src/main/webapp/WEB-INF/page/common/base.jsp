@@ -16,6 +16,8 @@
     <script type="text/javascript" src="${path}/static/js/plugins/easyui/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="${path}/static/js/common/jquery.easyui.extend.validatebox.js"></script>
     <script type="text/javascript" src="${path}/static/js/plugins/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <%-- [my97日期时间控件] --%>
+    <script type="text/javascript" src="${path}/static/js/plugins/My97DatePicker/WdatePicker.js"></script>
     <%-- [扩展JS] --%>
     <script type="text/javascript" src="${path}/static/js/index/arrayToTree.js"></script>
     <script type="text/javascript" src="${path}/static/js/index/extJs.js"></script>

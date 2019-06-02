@@ -9,7 +9,7 @@ public class User implements Serializable {
     /**
      * 主键id
      */
-    private Integer id;
+    private Long id;
     /**
      * 登陆名
      */
@@ -49,15 +49,11 @@ public class User implements Serializable {
     /**
      * 生日
      */
-    private Date birthday;
+    private String birthday;
     /**
      * 用户头像
      */
     private String headimgUrl;
-    /**
-     * 角色id
-     */
-    private Integer roleid;
     /**
      * 创建时间
      */
@@ -75,11 +71,11 @@ public class User implements Serializable {
      */
     private String modifyName;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -155,28 +151,12 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
-
     public String getHeadimgUrl() {
         return headimgUrl;
     }
 
     public void setHeadimgUrl(String headimgUrl) {
         this.headimgUrl = headimgUrl;
-    }
-
-    public Integer getRoleid() {
-        return roleid;
-    }
-
-    public void setRoleid(Integer roleid) {
-        this.roleid = roleid;
     }
 
     public Date getCreateTime() {
@@ -209,5 +189,13 @@ public class User implements Serializable {
 
     public void setModifyName(String modifyName) {
         this.modifyName = modifyName;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
     }
 }

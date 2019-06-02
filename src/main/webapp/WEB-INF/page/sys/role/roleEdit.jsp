@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title></title>
     <%@ include file="../../common/base.jsp" %>
-    <script src="${path}/static/js/role/role.js"></script>
+    <script src="${path}/static/js/sys/role.js"></script>
 </head>
 <body>
     <div class="easyui-layout" data-options="fit:true,border:false">

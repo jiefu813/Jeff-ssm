@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title></title>
 	<%@ include file="../../common/base.jsp" %>
-	<script src="${path}/static/js/menu/menu.js"></script>
+	<script src="${path}/static/js/sys/menu.js"></script>
 </head>
 <body>
 	<!-- 页面表格布局 -->
