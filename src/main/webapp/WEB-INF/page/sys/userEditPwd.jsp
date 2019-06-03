@@ -24,7 +24,7 @@
                 <table class="grid">
                     <tr>
                         <th><label class="form_label">登录名：</label></th>
-                        <td>${user.name}</td>
+                        <td>${user.loginName}</td>
                     </tr>
                     <tr>
                         <th><label class="form_label">原密码：</label></th>

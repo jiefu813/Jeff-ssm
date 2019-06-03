@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:aop="http://www.springframework.org/schema/aop"
-	xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/aop
 		http://www.springframework.org/schema/aop/spring-aop.xsd
@@ -12,63 +12,56 @@
 		http://www.springframework.org/schema/tx/spring-tx.xsd
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context.xsd">
-	<!-- 注解扫描 -->
-	<context:component-scan
-			base-package="com.jeff.service.impl"/>
-	<!-- 加载属性文件,如果多个配置文件逗号分割 -->
-	<context:property-placeholder
-		location="classpath:jdbc.properties" />
-	<!-- 数据源封装类 .数据源:获取数据库连接,spring-jdbc.jar中 -->
-	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="${jdbc.driver}"/>
-		<property name="url" value="${jdbc.url}"/>
-		<property name="username" value="${jdbc.username}"/>
-		<property name="password" value="${jdbc.password}"/>
-	</bean>
-	<!-- 创建SqlSessionFactory对象 -->
-	<bean id="factory"
-		class="org.mybatis.spring.SqlSessionFactoryBean">
-		<!-- 数据库连接信息来源于dataSource -->
-		<property name="dataSource" ref="dataSource"/>
-		<!-- 指定mybatis全局配置文件的位置 -->
-		<property name="configLocation" value="classpath:mybatis.xml" />
-		<!-- 自动扫描Mapping.xml文件 -->
-		<property name="mapperLocations"
-				  value="classpath:mapper/*.xml"/>
-		<!-- 给包下所有类起别名,别名为类名,不区分大小写 -->
-		<property name="typeAliasesPackage" value="com.jeff.entity"/>
-	</bean>
-	<!-- 扫描器相当于mybatis.xml中 mappers下package标签,扫描com.jeff.mapper包后会给对应接口创建对象 -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<!-- 要扫描哪个包 -->
-		<property name="basePackage" value="com.jeff.mapper"/>
-		<!-- 和factory产生关系 -->
-		<property name="sqlSessionFactoryBeanName" value="factory"/>
-	</bean>
-	<!-- 事务管理器 -->
-	<bean id="txManager"
-		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource"/>
-	</bean>
-	<!-- 声明式事务，事务如何切入 -->
-	<tx:advice id="txAdvice" transaction-manager="txManager">
-		<tx:attributes>
-			<!-- 哪些方法需要有事务控制 -->
-			<!-- 方法以ins 开头事务管理 -->
-			<tx:method name="save*" />
-			<tx:method name="remove*" />
-			<tx:method name="update*" />
-			<!-- 数据库此事务为只读事务,建议查询方法时使用 -->
-			<tx:method name="*" read-only="true" />
-		</tx:attributes>
-	</tx:advice>
-	<!-- 配置aop -->
-	<aop:config>
-		<!-- 切入点表达式 -->
-		<aop:pointcut
-			expression="execution(*  com.jeff.service.impl.*.*(..))" id="mypoint" />
-		<!-- 配置事务增强 -->
-		<aop:advisor advice-ref="txAdvice" pointcut-ref="mypoint" />
-	</aop:config>
+    <!-- 注解扫描 -->
+    <context:component-scan base-package="com.jeff.service.impl"/>
+    <!-- 加载属性文件,如果多个配置文件逗号分割 -->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+    <!-- 数据源封装类 .数据源:获取数据库连接,spring-jdbc.jar中 -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+    <!-- 创建SqlSessionFactory对象 -->
+    <bean id="factory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 数据库连接信息来源于dataSource -->
+        <property name="dataSource" ref="dataSource"/>
+        <!-- 指定mybatis全局配置文件的位置 -->
+        <property name="configLocation" value="classpath:mybatis.xml"/>
+        <!-- 自动扫描Mapping.xml文件 -->
+        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+        <!-- 给包下所有类起别名,别名为类名,不区分大小写 -->
+        <property name="typeAliasesPackage" value="com.jeff.entity"/>
+    </bean>
+    <!-- 扫描器相当于mybatis.xml中 mappers下package标签,扫描com.jeff.mapper包后会给对应接口创建对象 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- 要扫描哪个包 -->
+        <property name="basePackage" value="com.jeff.mapper"/>
+        <!-- 和factory产生关系 -->
+        <property name="sqlSessionFactoryBeanName" value="factory"/>
+    </bean>
+    <!-- 事务管理器 -->
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!-- 声明式事务，事务如何切入 -->
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <!-- 哪些方法需要有事务控制 -->
+            <!-- 方法以ins 开头事务管理 -->
+            <tx:method name="save*"/>
+            <tx:method name="remove*"/>
+            <tx:method name="update*"/>
+            <!-- 数据库此事务为只读事务,建议查询方法时使用 -->
+            <tx:method name="*" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+    <!-- 配置aop -->
+    <aop:config>
+        <!-- 切入点表达式 -->
+        <aop:pointcut expression="execution(*  com.jeff.service.impl.*.*(..))" id="mypoint"/>
+        <!-- 配置事务增强 -->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="mypoint"/>
+    </aop:config>
 </beans>

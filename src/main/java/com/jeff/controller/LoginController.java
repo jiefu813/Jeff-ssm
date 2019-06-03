@@ -29,7 +29,7 @@ public class LoginController {
 
     //登陆页面
     @RequestMapping("loginPage")
-    public String loginPage(){
+    public String loginPage() {
 
         return "sys/login";
     }
@@ -37,9 +37,9 @@ public class LoginController {
     //登陆
     @PostMapping("login")
     @ResponseBody
-    public String login(User u){
+    public String login(User u) {
         Subject user = SecurityUtils.getSubject();
-        UsernamePasswordToken token=new UsernamePasswordToken(u.getLoginName(),u.getPassword());
+        UsernamePasswordToken token = new UsernamePasswordToken(u.getLoginName(), u.getPassword());
         try {
             user.login(token);
             return "success";
@@ -54,9 +54,10 @@ public class LoginController {
         }
     }
 
-    @RequestMapping(value = {"/","index"})
-    public  String index(){
-
+    @RequestMapping(value = {"/", "index"})
+    public String index(HttpSession session) {
+        User user = (User) SecurityUtils.getSubject().getPrincipal();
+        session.setAttribute("user", user);
         return "sys/index";
     }
 

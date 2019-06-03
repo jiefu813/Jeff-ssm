@@ -3,18 +3,21 @@ package com.jeff.controller;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.jeff.common.entity.Datagrid;
-import com.jeff.entity.Role;
 import com.jeff.entity.User;
 import com.jeff.entity.UserVo;
 import com.jeff.service.UserService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServlet;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpSession;
-import java.util.*;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("user")
@@ -26,6 +29,7 @@ public class UserController {
     @RequestMapping("/editPwdPage")
     public String editPwdPage(Model model, HttpSession session) {
         User user = (User) session.getAttribute("user");
+        model.addAttribute("user", user);
         return "sys/userEditPwd";
     }
 
@@ -45,25 +49,27 @@ public class UserController {
     }
 
     @RequestMapping(value = "/manager")
+    @RequiresPermissions("user:list")
     public String manager(Model model, @RequestParam(required = false) String PageName,
-                          @RequestParam(required = false, defaultValue = "glyphicon-list") String PageIcon, String flag) {
+                          @RequestParam(required = false, defaultValue = "glyphicon-list") String PageIcon) {
         model.addAttribute("PageName", PageName);
         model.addAttribute("PageIcon", PageIcon);
         return "sys/user/userList";
     }
 
     @RequestMapping("/dataGrid")
+    @RequiresPermissions("user:list")
     @ResponseBody
-    public Object dataGrid(UserVo userVo, Integer page, Integer rows, String sort, String order) {
+    public Object dataGrid(UserVo userVo, Integer page, Integer rows) {
         PageHelper.startPage(page, rows);
-        Map<String, Object> condition = new HashMap<String, Object>();
-        if (userVo.getLoginName() != null &&!"".equals(userVo.getLoginName())) {
+        Map<String, Object> condition = new HashMap<>();
+        if (userVo.getLoginName() != null && !"".equals(userVo.getLoginName())) {
             condition.put("loginName", userVo.getLoginName());
         }
-        if (userVo.getCreatedateStart() != null&&!"".equals(userVo.getCreatedateStart())) {
+        if (userVo.getCreatedateStart() != null && !"".equals(userVo.getCreatedateStart())) {
             condition.put("startTime", userVo.getCreatedateStart());
         }
-        if (userVo.getCreatedateEnd() != null&&!"".equals(userVo.getCreatedateEnd())) {
+        if (userVo.getCreatedateEnd() != null && !"".equals(userVo.getCreatedateEnd())) {
             condition.put("endTime", userVo.getCreatedateEnd());
         }
         List<User> userList = userService.getUserList(condition);
@@ -72,15 +78,17 @@ public class UserController {
     }
 
     @RequestMapping("/addPage")
+    @RequiresPermissions("user:create")
     public String addPage() {
         return "sys/user/userAdd";
     }
 
     @RequestMapping("/add")
+    @RequiresPermissions("user:create")
     @ResponseBody
     public String add(User user, HttpSession session) {
         User u = userService.selectUserByLoginName(user.getLoginName());
-        if (null!=u) {
+        if (null != u) {
             return "alreadyExists";
         }
         User currentUser = (User) session.getAttribute("user");
@@ -95,6 +103,7 @@ public class UserController {
     }
 
     @RequestMapping("/editPage")
+    @RequiresPermissions("user:update")
     public String editPage(Model model, Long id) {
         User user = userService.getById(id);
         model.addAttribute("user", user);
@@ -102,6 +111,7 @@ public class UserController {
     }
 
     @RequestMapping("/edit")
+    @RequiresPermissions("user:update")
     @ResponseBody
     public String edit(User user, HttpSession session) {
         User currentUser = (User) session.getAttribute("user");
@@ -109,7 +119,7 @@ public class UserController {
             user.setModifyName(currentUser.getLoginName());
         }
         user.setModifyTime(new Date());
-        if(user.getPassword()==null||"".equals(user.getPassword())){
+        if (user.getPassword() == null || "".equals(user.getPassword())) {
             User u = userService.getById(user.getId());
             user.setPassword(u.getPassword());
         }
@@ -120,6 +130,7 @@ public class UserController {
     }
 
     @RequestMapping("/delete")
+    @RequiresPermissions("user:delete")
     @ResponseBody
     public String delete(Long id) {
         if (userService.removeById(id)) {

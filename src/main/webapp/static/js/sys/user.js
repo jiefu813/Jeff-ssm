@@ -11,15 +11,6 @@ function loadSuccess_on(result) {
     }
 }
 
-//formatter
-function opt_formatter(value, row, index) {
-    var str = '';
-    str += $.formatString('<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:\'glyphicon-pencil icon-blue\',plain:true" onclick="edit_on(\'{0}\')">修改</a>', row.id);
-    str += '&nbsp;&nbsp;|&nbsp;&nbsp;';
-    str += $.formatString('<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:\'glyphicon-trash icon-red\',plain:true" onclick="del_on(\'{0}\');" >删除</a>', row.id);
-    return str;
-}
-
 //新增
 function add_on() {
     var url = 'addPage';

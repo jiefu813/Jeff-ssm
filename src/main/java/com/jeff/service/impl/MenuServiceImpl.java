@@ -65,4 +65,10 @@ public class MenuServiceImpl implements MenuService {
 
         return menuMapper.removeById(id)>0;
     }
+
+    @Override
+    public List<String> getPermsList(Long roleId) {
+
+        return menuMapper.getPermsList(roleId);
+    }
 }

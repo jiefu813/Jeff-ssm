@@ -25,4 +25,6 @@ public interface MenuMapper {
     int updateById(Menu menu);
     @Delete("delete from menu where id=#{id}")
     int removeById(Long id);
+    @Select("select perms from menu m left join role_menu rm on m.id=rm.menu_id where rm.role_id=#{roleId}")
+    List<String> getPermsList(Long roleId);
 }

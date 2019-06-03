@@ -21,4 +21,6 @@ public interface MenuService {
     boolean updateById(Menu menu);
 
     boolean removeById(Long id);
+
+    List<String> getPermsList(Long roleId);
 }

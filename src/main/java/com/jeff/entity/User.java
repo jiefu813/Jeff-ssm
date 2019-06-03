@@ -55,6 +55,10 @@ public class User implements Serializable {
      */
     private String headimgUrl;
     /**
+     * 角色id
+     */
+    private Long roleId;
+    /**
      * 创建时间
      */
     private Date createTime;
@@ -197,5 +201,13 @@ public class User implements Serializable {
 
     public void setBirthday(String birthday) {
         this.birthday = birthday;
+    }
+
+    public Long getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
     }
 }

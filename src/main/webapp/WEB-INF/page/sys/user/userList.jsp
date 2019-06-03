@@ -64,8 +64,10 @@
              </div>
              <!-- 页面工具栏操作按钮布局 -->
              <div id="toolbar" class="list_toolbar">
-                <a id="collapseBtn" href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'glyphicon-upload icon-blue',plain:true" onclick="collapse_on()">查询</a>
-                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="add_on()">新增</a>
+                 <a id="collapseBtn" href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'glyphicon-upload icon-blue',plain:true" onclick="collapse_on()">查询</a>
+                 <shiro:hasPermission name="user:create">
+                    <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="add_on()">新增</a>
+                 </shiro:hasPermission>
             </div>
         </div>
 
@@ -76,5 +78,18 @@
             <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-cancel',plain:false"  onclick="close_on()">关闭</a>
         </div>
     </div>
+    <script>
+        function opt_formatter(value, row, index) {
+            var str = '';
+            <shiro:hasPermission name="user:update">
+                str += $.formatString('<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:\'glyphicon-pencil icon-blue\',plain:true" onclick="edit_on(\'{0}\')">修改</a>', row.id);
+            </shiro:hasPermission>
+            <shiro:hasPermission name="user:delete">
+                str += '&nbsp;&nbsp;|&nbsp;&nbsp;';
+                str += $.formatString('<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:\'glyphicon-trash icon-red\',plain:true" onclick="del_on(\'{0}\');" >删除</a>', row.id);
+            </shiro:hasPermission>
+            return str;
+        }
+    </script>
 </body>
 </html>
