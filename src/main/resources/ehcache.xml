@@ -1,0 +1,19 @@
+<ehcache>
+    <diskStore path="java.io.tmpdir"/>
+    
+    <!-- 
+		maxElementsInMemory 最大缓存元素个数
+		eternal 缓存是否永久有效，一般都是false。
+		timeToIdleSeconds 最长空闲时间
+		timeToLiveSeconds 最长生命周期
+		overflowToDisk 是否持久化到磁盘
+	 -->
+    
+    <defaultCache
+        maxElementsInMemory="10000"
+        eternal="false"
+        timeToIdleSeconds="120"
+        timeToLiveSeconds="120"
+        overflowToDisk="true"/>
+
+</ehcache>
