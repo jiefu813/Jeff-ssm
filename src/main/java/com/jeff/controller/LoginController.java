@@ -40,6 +40,8 @@ public class LoginController {
     public String login(User u) {
         Subject user = SecurityUtils.getSubject();
         UsernamePasswordToken token = new UsernamePasswordToken(u.getLoginName(), u.getPassword());
+        //记住我
+        token.setRememberMe(true);
         try {
             user.login(token);
             return "success";

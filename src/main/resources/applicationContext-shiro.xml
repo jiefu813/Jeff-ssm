@@ -24,7 +24,7 @@
                 /loginPage=anon
                 /login=anon
                 /logout=logout
-                /** = authc
+                /** = user
             </value>
         </property>
     </bean>
@@ -33,6 +33,7 @@
         <property name="realm" ref="userRealm"/>
         <property name="cacheManager" ref="cacheManager"/>
         <property name="sessionManager" ref="sessionManager"/>
+        <property name="rememberMeManager" ref="rememberMeManager"/>
     </bean>
     <!-- 配置自定义realm -->
     <bean id="userRealm" class="com.jeff.common.shiro.UserRealm">
@@ -60,5 +61,16 @@
         <property name="globalSessionTimeout" value="300000"></property>
         <!-- 删除无效session -->
         <property name="deleteInvalidSessions" value="true"></property>
+    </bean>
+    <!-- 记住我配置 -->
+    <bean id="rememberMeManager" class="org.apache.shiro.web.mgt.CookieRememberMeManager">
+        <property name="cookie" ref="rememberMeCookie"/>
+    </bean>
+    <!-- 记住我cookie -->
+    <bean id="rememberMeCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+        <!-- 设置cookie的存活时间 -->
+        <property name="maxAge" value="604800"/>
+        <!-- 设置cookie的名称 -->
+        <property name="name" value="rememberMe"/>
     </bean>
 </beans>
