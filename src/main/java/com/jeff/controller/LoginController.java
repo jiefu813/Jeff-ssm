@@ -1,14 +1,12 @@
 package com.jeff.controller;
 
 import com.jeff.entity.User;
-import com.jeff.service.UserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.DisabledAccountException;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,9 +21,6 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 public class LoginController {
-
-    @Autowired
-    private UserService userService;
 
     //登陆页面
     @RequestMapping("loginPage")

@@ -1,5 +1,6 @@
 package com.jeff.common.shiro;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.jeff.entity.User;
 import com.jeff.service.MenuService;
 import com.jeff.service.UserService;
@@ -15,6 +16,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.List;
 
 /**
@@ -42,7 +44,7 @@ public class UserRealm extends AuthorizingRealm {
         }
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         for (String perms : permsList) {
-            if(null!=perms&&!"".equals(perms)){
+            if (null != perms && !"".equals(perms)) {
                 info.addStringPermission(perms);
             }
         }
@@ -56,7 +58,7 @@ public class UserRealm extends AuthorizingRealm {
         // 从token 中获取身份信息
         String username = token.getPrincipal().toString();
         // 根据用户名到数据库中取出用户信息如果查询不到返回null
-        User user = userService.selectUserByLoginName(username);
+        User user = userService.getOne(new QueryWrapper<User>().eq("login_name", username));
         // 返回认证信息
         return new SimpleAuthenticationInfo(user, user.getPassword(), ByteSource.Util.bytes(user.getSalt()), this.getName());
     }

@@ -1,7 +1,8 @@
 package com.jeff.controller;
 
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.jeff.common.entity.Datagrid;
 import com.jeff.entity.User;
 import com.jeff.entity.UserVo;
@@ -13,11 +14,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 import javax.servlet.http.HttpSession;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 @Controller
 @RequestMapping("user")
@@ -41,7 +40,7 @@ public class UserController {
             return "passwordError";
         }
         user.setPassword(pwd);
-        if (userService.updatePwd(user)) {
+        if (userService.updateById(user)) {
             return "succeed";
         } else {
             return "error";
@@ -61,20 +60,19 @@ public class UserController {
     @RequiresPermissions("user:list")
     @ResponseBody
     public Object dataGrid(UserVo userVo, Integer page, Integer rows) {
-        PageHelper.startPage(page, rows);
-        Map<String, Object> condition = new HashMap<>();
+        Page<User> p = new Page<>(page, rows);
+        QueryWrapper<User> wrapper = new QueryWrapper<>();
         if (userVo.getLoginName() != null && !"".equals(userVo.getLoginName())) {
-            condition.put("loginName", userVo.getLoginName());
+            wrapper.like("login_name", userVo.getLoginName());
         }
         if (userVo.getCreatedateStart() != null && !"".equals(userVo.getCreatedateStart())) {
-            condition.put("startTime", userVo.getCreatedateStart());
+            wrapper.ge("create_time", userVo.getCreatedateStart());
         }
         if (userVo.getCreatedateEnd() != null && !"".equals(userVo.getCreatedateEnd())) {
-            condition.put("endTime", userVo.getCreatedateEnd());
+            wrapper.le("create_time", userVo.getCreatedateEnd());
         }
-        List<User> userList = userService.getUserList(condition);
-        PageInfo<User> pageInfo = new PageInfo<>(userList);
-        return new Datagrid(pageInfo.getList(), pageInfo.getTotal());
+        IPage<User> selectPage = userService.page(p, wrapper);
+        return new Datagrid(selectPage.getRecords(), selectPage.getTotal());
     }
 
     @RequestMapping("/addPage")
@@ -87,7 +85,7 @@ public class UserController {
     @RequiresPermissions("user:create")
     @ResponseBody
     public String add(User user, HttpSession session) {
-        User u = userService.selectUserByLoginName(user.getLoginName());
+        User u = userService.getOne(new QueryWrapper<User>().eq("login_name", user.getLoginName()));
         if (null != u) {
             return "alreadyExists";
         }

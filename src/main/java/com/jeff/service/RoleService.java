@@ -1,21 +1,12 @@
 package com.jeff.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.jeff.entity.Role;
-
-import java.util.List;
 
 /**
  * @author Jeff
  * @createTime 2019-06-01 17:24
  */
-public interface RoleService {
-    List<Role> getRoleList(Role role);
+public interface RoleService extends IService<Role> {
 
-    boolean save(Role role);
-
-    Role getById(Long id);
-
-    boolean updateById(Role role);
-
-    boolean removeById(Long id);
 }

@@ -7,7 +7,7 @@ import org.junit.Test;
  * @author Jeff
  * @createTime 2019-06-03 1:16
  */
-public class MD5Encrypt {
+public class MD5EncryptTest {
 
     @Test
     public void encrypt(){

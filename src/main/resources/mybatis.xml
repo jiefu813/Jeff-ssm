@@ -11,11 +11,11 @@
         <setting name="logImpl" value="LOG4J"/>
     </settings>
 
-    <!-- 配置分页插件 -->
+    <!-- 配置mybatisplus分页插件 -->
     <plugins>
-        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+        <plugin interceptor="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor">
             <!-- 设置数据库类型 Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL六种数据库-->
-            <property name="helperDialect" value="mysql"/>
+            <property name="dialectType" value="mysql"/>
         </plugin>
     </plugins>
 

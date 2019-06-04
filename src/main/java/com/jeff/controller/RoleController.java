@@ -1,7 +1,8 @@
 package com.jeff.controller;
 
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.jeff.common.entity.Datagrid;
 import com.jeff.entity.Role;
 import com.jeff.entity.User;
@@ -9,11 +10,13 @@ import com.jeff.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.util.Date;
-import java.util.List;
 
 /**
  * @author Jeff
@@ -36,11 +39,14 @@ public class RoleController {
 
     @RequestMapping("/dataGrid")
     @ResponseBody
-    public Object dataGrid(Integer page, Integer rows,Role role) {
-        PageHelper.startPage(page, rows);
-        List<Role> roleList = roleService.getRoleList(role);
-        PageInfo<Role> pageInfo = new PageInfo<>(roleList);
-        return new Datagrid(pageInfo.getList(), pageInfo.getTotal());
+    public Object dataGrid(Integer page, Integer rows, Role role) {
+        Page<Role> p = new Page<>(page, rows);
+        QueryWrapper<Role> wrapper = new QueryWrapper<>();
+        if (role.getName() != null && !"".equals(role.getName())) {
+            wrapper.like("name", role.getName());
+        }
+        IPage<Role> selectPage = roleService.page(p, wrapper);
+        return new Datagrid(selectPage.getRecords(), selectPage.getTotal());
     }
 
     @RequestMapping("/addPage")
@@ -71,7 +77,7 @@ public class RoleController {
 
     @RequestMapping("/edit")
     @ResponseBody
-    public String edit(Role role,HttpSession session) {
+    public String edit(Role role, HttpSession session) {
         User user = (User) session.getAttribute("user");
         if (null != user) {
             role.setModifyName(user.getLoginName());
