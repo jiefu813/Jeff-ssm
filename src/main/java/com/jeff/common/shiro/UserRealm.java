@@ -1,6 +1,7 @@
 package com.jeff.common.shiro;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.jeff.entity.Menu;
 import com.jeff.entity.User;
 import com.jeff.service.MenuService;
 import com.jeff.service.UserService;
@@ -37,15 +38,15 @@ public class UserRealm extends AuthorizingRealm {
         // 获取身份信息--该身份信息在认证时已设置
         User user = (User) principals.getPrimaryPrincipal();
         // 根据身份信息获取权限数据
-        List<String> permsList = menuService.getPermsList(user.getRoleId());
+        List<Menu> menuList = menuService.getMenuList(user.getRoleId());
         // 将权限信息保存到AuthorizationInfo中
-        if (permsList == null || permsList.size() == 0) {
+        if (menuList == null || menuList.size() == 0) {
             return null;
         }
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-        for (String perms : permsList) {
-            if (null != perms && !"".equals(perms)) {
-                info.addStringPermission(perms);
+        for (Menu menu : menuList) {
+            if (null != menu.getPerms() && !"".equals(menu.getPerms())) {
+                info.addStringPermission(menu.getPerms());
             }
         }
         return info;

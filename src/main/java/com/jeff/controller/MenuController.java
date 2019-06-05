@@ -1,5 +1,6 @@
 package com.jeff.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.jeff.common.entity.Datagrid;
 import com.jeff.common.entity.Tree;
 import com.jeff.entity.Menu;
@@ -8,7 +9,9 @@ import com.jeff.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.util.Date;
@@ -44,7 +47,7 @@ public class MenuController {
     @ResponseBody
     public Object treeGrid() {
 
-        List<Menu> menuList = menuService.getAllMenu();
+        List<Menu> menuList = menuService.list(new QueryWrapper<Menu>().orderByAsc("seq"));
 
         return new Datagrid(menuList, menuList.size());
     }
@@ -77,13 +80,13 @@ public class MenuController {
 
     @RequestMapping("/edit")
     @ResponseBody
-    public String edit(Menu menu,HttpSession session) {
+    public String edit(Menu menu, HttpSession session) {
         User user = (User) session.getAttribute("user");
         if (null != user) {
             menu.setModifyName(user.getLoginName());
         }
         menu.setModifyTime(new Date());
-        if(menuService.updateById(menu)){
+        if (menuService.updateById(menu)) {
             return "success";
         }
         return "error";
@@ -92,10 +95,17 @@ public class MenuController {
     @RequestMapping("/delete")
     @ResponseBody
     public String delete(Long id) {
-        if(menuService.removeById(id)){
+        if (menuService.removeById(id)) {
             return "success";
         }
         return "error";
+    }
+
+    @RequestMapping("/allTree")
+    @ResponseBody
+    public Object allTree(Long id) {
+        // 根据角色id获取对应的资源
+        return menuService.getAllTreeByRoleId(id);
     }
 
 }

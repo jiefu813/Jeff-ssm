@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.jeff.common.entity.Datagrid;
 import com.jeff.entity.Role;
 import com.jeff.entity.User;
+import com.jeff.service.RoleMenuService;
 import com.jeff.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,6 +29,8 @@ public class RoleController {
 
     @Autowired
     private RoleService roleService;
+    @Autowired
+    private RoleMenuService roleMenuService;
 
     @RequestMapping(value = "manager")
     public String manager(Model model, @RequestParam(required = false) String PageName,
@@ -93,6 +96,21 @@ public class RoleController {
     @ResponseBody
     public String delete(Long id) {
         if (roleService.removeById(id)) {
+            return "success";
+        }
+        return "error";
+    }
+
+    @RequestMapping("/grantPage")
+    public String grantPage(Model model, Long id) {
+        model.addAttribute("id", id);
+        return "sys/role/roleGrant";
+    }
+
+    @RequestMapping("/grant")
+    @ResponseBody
+    public String grant(Long id, String resourceIds) {
+        if (roleMenuService.updateRoleMenu(id, resourceIds)) {
             return "success";
         }
         return "error";

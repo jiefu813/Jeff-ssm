@@ -32,22 +32,13 @@
         <!-- 数据库连接信息来源于dataSource -->
         <property name="dataSource" ref="dataSource"/>
         <!-- 指定mybatis全局配置文件的位置 -->
-        <!--<property name="configLocation" value="classpath:mybatis.xml"/>-->
+        <property name="configLocation" value="classpath:mybatis.xml"/>
         <!-- 自动扫描Mapping.xml文件 -->
         <!--<property name="mapperLocations" value="classpath:mapper/*.xml"/>-->
         <!-- 给包下所有类起别名,别名为类名,不区分大小写 -->
         <property name="typeAliasesPackage" value="com.jeff.entity"/>
         <!-- 注入全局mybatisplus策略配置 -->
         <property name="globalConfig" ref="globalConfig"/>
-        <!-- 插件注册 -->
-        <property name="plugins">
-            <list>
-                <!-- 注册分页插件 -->
-                <bean class="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor">
-                    <property name="dialectType" value="mysql"/>
-                </bean>
-            </list>
-        </property>
     </bean>
     <!-- 扫描器相当于mybatis.xml中 mappers下package标签,扫描com.jeff.mapper包后会给对应接口创建对象 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">

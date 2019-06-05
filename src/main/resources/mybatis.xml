@@ -5,8 +5,8 @@
 <configuration>
 
     <settings>
-        <!-- 下划线转驼峰 -->
-        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- 下划线转驼峰，mybatisplus默认为true -->
+        <!--<setting name="mapUnderscoreToCamelCase" value="true"/>-->
         <!-- 开启log4j -->
         <setting name="logImpl" value="LOG4J"/>
     </settings>

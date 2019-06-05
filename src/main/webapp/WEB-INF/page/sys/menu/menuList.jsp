@@ -28,13 +28,14 @@
 				">
 				<thead>
 					<tr>
-						<th data-options="field:'name'" width="15%">菜单名称</th>
+						<th data-options="field:'name'" width="10%">菜单名称</th>
 						<th data-options="field:'type',formatter:function(value,row,index){if(value=='MENU'){return '菜单';}else{return '按钮';}}" width="6%" >菜单类型</th>
 						<th data-options="field:'status',formatter:function(value,row,index){if(value=='ENABLE'){return '正常';}else{return '停用';}}" width="6%">菜单状态</th>
 						<th data-options="field:'opened',formatter:function(value,row,index){if(value=='UNFOLD'){return '展开';}else{return '折叠';}}" width="6%">展开状态</th>
                         <th data-options="field:'seq'" width="4%">排序</th>
                         <th data-options="field:'iconCls'" width="12%">菜单图标</th>
-                        <th data-options="field:'url'" width="18%">菜单路径</th>
+                        <th data-options="field:'url'" width="10%">菜单路径</th>
+                        <th data-options="field:'perms'" width="18%">授权标识</th>
                         <th data-options="field:'createTime'" formatter="opt_formatter_time" width="12%">创建时间</th>
 						<th data-options="field:'createName'" width="6%">创建人</th>
 						<th data-options="field:'action'" formatter="opt_formatter" width="10%">操作</th>

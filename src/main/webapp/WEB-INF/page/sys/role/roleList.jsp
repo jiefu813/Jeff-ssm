@@ -36,7 +36,7 @@
                             <th data-options="field:'seq'" width="5%">排序</th>
                             <th data-options="field:'createTime'" formatter="opt_formatter_time" width="12%">创建时间</th>
                             <th data-options="field:'createName'" width="6%">创建人</th>
-                            <th data-options="field:'action'"  formatter="opt_formatter"  width="10%">操作</th>
+                            <th data-options="field:'action'"  formatter="opt_formatter"  width="15%">操作</th>
                         </tr>
                     </thead>
             </table>
@@ -69,8 +69,8 @@
 	<!-- 授权页面弹出框布局 --> 
 	<div id="openGrantWindow" class="easyui-dialog" closed="true"  data-options="iconCls:'icon-save',modal:true,buttons:'#grantFootBar'"></div>
 	<div id="grantFootBar" style="height:auto">
-        <a href="javascript:void(0)" id="sbtn" class="easyui-linkbutton" data-options="iconCls:'icon-ok',plain:false" onclick="saveAuthorization_on()">保存</a>
-        <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-cancel',plain:false"  onclick="close_onGrant()">关闭</a>
+        <a href="javascript:void(0)" id="grantSave" class="easyui-linkbutton" data-options="iconCls:'icon-ok',plain:false" onclick="saveGrant_on()">保存</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-cancel',plain:false"  onclick="closeGrant_on()">关闭</a>
 	</div>
 </body>
 </html>

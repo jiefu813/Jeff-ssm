@@ -14,8 +14,8 @@ function loadSuccess_on(result) {
 //formatter
 function opt_formatter(value, row, index) {
     var str = '';
-    /*str += $.formatString('<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:\'glyphicon-ok icon-green\'" onclick="authorization_on(\'{0}\');" >授权</a>', row.id);
-    str += '&nbsp;&nbsp;|&nbsp;&nbsp;';*/
+    str += $.formatString('<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:\'glyphicon-ok icon-green\'" onclick="authorization_on(\'{0}\');" >授权</a>', row.id);
+    str += '&nbsp;&nbsp;|&nbsp;&nbsp;';
     str += $.formatString('<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:\'glyphicon-pencil icon-blue\'" onclick="edit_on(\'{0}\');" >编辑</a>', row.id);
     str += '&nbsp;&nbsp;|&nbsp;&nbsp;';
     str += $.formatString('<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:\'glyphicon-trash icon-red\'" onclick="del_on(\'{0}\');" >删除</a>', row.id);
@@ -45,6 +45,22 @@ function edit_on(pkid) {
         $.showOpenWindow($('#openWindow'), '编辑页面', 'icon-edit', url, width,height, true, false, false);
     } else {
         $.messager.alert('提示', '编辑的记录为空或不存在！');
+    }
+}
+
+//角色授权
+function authorization_on(pkid) {
+    if (pkid) {
+        //选中记录
+        $('#grid').datagrid('getSelected', pkid);
+        var url = 'grantPage?id=' + pkid;
+        //如采用默认宽度和高度,参数设置为undefined
+        var width= 500;
+        var height = 500;
+        $('#saveBtn').show();
+        $.showOpenWindow($('#openGrantWindow'),'授权页面', 'glyphicon-ok icon-green', url, width, height, true,false, false);
+    } else {
+        $.messager.alert('提示', '授权的记录为空或不存在！');
     }
 }
 
@@ -140,4 +156,54 @@ function clean_on() {
 //关闭窗口
 function close_on() {
     $('#openWindow').dialog('close');
+}
+
+//关闭授权页面窗口
+function closeGrant_on() {
+    $('#openGrantWindow').dialog('close');
+}
+
+//保存授权信息
+function saveGrant_on(){
+    var fm = $('#detailIframe')[0].contentWindow.$('#detailForm');
+    fm.form('submit', {
+        onSubmit : function() {
+            progressLoad();
+            var isValid = fm.form('validate');
+            if (!isValid) {
+                progressClose();
+            }
+            var checknodes =  $('#detailIframe')[0].contentWindow.$('#menuTree').tree('getChecked',['checked','indeterminate']);
+            var ids = [];
+            if (checknodes.length > 0) {
+                for ( var i = 0; i < checknodes.length; i++) {
+                    ids.push(checknodes[i].id);
+                }
+            }
+            $('#detailIframe')[0].contentWindow.$('#resourceIds').val(ids);
+            return isValid;
+        },
+        success : function(data) {
+            progressClose();
+            if (data=="success") {
+                $.messager.show( {
+                    title : '提示',
+                    msg : "授权成功",
+                    showType:'show'
+                });
+                $('#menuTree').treegrid('reload');
+                $('#openGrantWindow').dialog('close');
+
+            } else {
+                $.messager.show( {
+                    title : '错误',
+                    msg : "授权失败",
+                    width:'300px',
+                    height:'150px',
+                    timeout:0,
+                    showType:'show'
+                });
+            }
+        }
+    });
 }

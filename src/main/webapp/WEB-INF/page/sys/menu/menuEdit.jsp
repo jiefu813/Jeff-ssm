@@ -85,6 +85,14 @@
                         <input name="url" class="easyui-textbox" data-options="width:170,height:28" value="${menu.url}">
                     </td>
                 </tr>
+                <tr>
+                <td>
+                    <label class="form_label">授权标识</label>
+                </td>
+                <td colspan="3">
+                    <input name="perms" class="easyui-textbox" data-options="width:460,height:28" value="${menu.perms}">
+                </td>
+                </tr>
             </table>
         </form>
     </div>

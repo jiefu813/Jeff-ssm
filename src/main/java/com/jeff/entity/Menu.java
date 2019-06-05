@@ -1,67 +1,79 @@
 package com.jeff.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldStrategy;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
 import java.util.Date;
 
 public class Menu implements Serializable {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	/**
-	 * 主键
-	 */
-	private Long id;
-	/**
-	 * 菜单类别
-	 */
-	private String type;
-	/**
-	 * 菜单名称
-	 */
-	private String name;
-	/**
-	 * 菜单url
-	 */
-	private String url;
-	/**
-	 * 父菜单ID，一级菜单为0
-	 */
+    /**
+     * 主键
+     */
+    private Long id;
+    /**
+     * 菜单名称
+     */
+    private String name;
+    /**
+     * 菜单类别
+     */
+    private String type;
+    /**
+     * 状态
+     */
+    private String status;
+    /**
+     * 父菜单ID，一级菜单为null
+     */
+    /**
+     * IGNORED      忽略判断
+     * NOT_NULL     非null判断
+     * NOT_EMPTY    非空判断
+     */
+    @TableField(strategy = FieldStrategy.IGNORED)
     @JsonProperty("_parentId")
-	private Long parentId;
-	/**
-	 * 排序
-	 */
-	private Integer seq;
-	/**
-	 * 状态
-	 */
-	private String status;
-	/**
-	 * 是否展开
-	 */
-	private String opened;
-	/**
-	 * 图标
-	 */
+    private Long parentId;
+    /**
+     * 是否展开
+     */
+    private String opened;
+    /**
+     * 排序
+     */
+    private Integer seq;
+    /**
+     * 图标
+     */
     @JsonProperty("iconCls")
-	private String icon;
-	/**
-	 * 创建时间
-	 */
-	private Date createTime;
-	/**
-	 * 创建人
-	 */
-	private String createName;
-	/**
-	 * 修改时间
-	 */
-	private Date modifyTime;
-	/**
-	 * 修改人
-	 */
-	private String modifyName;
+    private String icon;
+    /**
+     * 菜单url
+     */
+    private String url;
+    /**
+     * 授权标识
+     */
+    private String perms;
+    /**
+     * 创建时间
+     */
+    private Date createTime;
+    /**
+     * 创建人
+     */
+    private String createName;
+    /**
+     * 修改时间
+     */
+    private Date modifyTime;
+    /**
+     * 修改人
+     */
+    private String modifyName;
 
     public Long getId() {
         return id;
@@ -165,5 +177,13 @@ public class Menu implements Serializable {
 
     public void setModifyName(String modifyName) {
         this.modifyName = modifyName;
+    }
+
+    public String getPerms() {
+        return perms;
+    }
+
+    public void setPerms(String perms) {
+        this.perms = perms;
     }
 }
