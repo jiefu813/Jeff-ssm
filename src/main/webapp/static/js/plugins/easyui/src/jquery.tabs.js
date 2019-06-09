@@ -1,5 +1,5 @@
 /**
- * EasyUI for jQuery 1.7.0
+ * EasyUI for jQuery 1.5.4.5
  * 
  * Copyright (c) 2009-2018 www.jeasyui.com. All rights reserved.
  *
@@ -29,30 +29,13 @@
 	 */
 	function setScrollers(container) {
 		var opts = $.data(container, 'tabs').options;
-		if (!opts.showHeader){return}
+		if (opts.tabPosition == 'left' || opts.tabPosition == 'right' || !opts.showHeader){return}
 		
 		var header = $(container).children('div.tabs-header');
 		var tool = header.children('div.tabs-tool:not(.tabs-tool-hidden)');
 		var sLeft = header.children('div.tabs-scroller-left');
 		var sRight = header.children('div.tabs-scroller-right');
 		var wrap = header.children('div.tabs-wrap');
-
-		if (opts.tabPosition == 'left' || opts.tabPosition == 'right'){
-			if (!tool.length){return}
-			tool._outerWidth(header.width());
-			var toolCss = {
-				left: opts.tabPosition == 'left' ? 'auto':0,
-				right: opts.tabPosition == 'left' ? 0 : 'auto',
-				top: opts.toolPosition == 'top' ? 0 : 'auto',
-				bottom: opts.toolPosition == 'top' ? 'auto' : 0
-			};
-			var wrapCss = {
-				marginTop: opts.toolPosition == 'top' ? tool.outerHeight() : 0
-			};
-			tool.css(toolCss);
-			wrap.css(wrapCss);
-			return;
-		}
 		
 		// set the tool height
 		var tHeight = header.outerHeight();
@@ -900,8 +883,7 @@
 		height: 'auto',
 		headerWidth: 150,	// the tab header width, it is valid only when tabPosition set to 'left' or 'right' 
 		tabWidth: 'auto',	// the tab width
-		// tabHeight: 27,		// the tab height
-		tabHeight: 32,		// the tab height
+		tabHeight: 27,		// the tab height
 		selected: 0,		// the initialized selected tab index
 		showHeader: true,
 		plain: false,
@@ -911,7 +893,7 @@
 		narrow: false,
 		pill: false,
 		tools: null,
-		toolPosition: 'right',	// left,right,top,bottom
+		toolPosition: 'right',	// left,right
 		tabPosition: 'top',		// possible values: top,bottom
 		scrollIncrement: 100,
 		scrollDuration: 400,

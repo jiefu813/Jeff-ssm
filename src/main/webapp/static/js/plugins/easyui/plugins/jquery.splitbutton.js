@@ -1,5 +1,5 @@
 /**
- * EasyUI for jQuery 1.7.0
+ * EasyUI for jQuery 1.5.4.5
  * 
  * Copyright (c) 2009-2018 www.jeasyui.com. All rights reserved.
  *
@@ -29,7 +29,7 @@ if(_7){
 $.extend(_7.options,_4);
 }else{
 $.data(this,"splitbutton",{options:$.extend({},$.fn.splitbutton.defaults,$.fn.splitbutton.parseOptions(this),_4)});
-$(this)._propAttr("disabled",false);
+$(this).removeAttr("disabled");
 }
 _1(this);
 });

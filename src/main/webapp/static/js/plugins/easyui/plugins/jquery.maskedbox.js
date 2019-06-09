@@ -1,5 +1,5 @@
 /**
- * EasyUI for jQuery 1.7.0
+ * EasyUI for jQuery 1.5.4.5
  * 
  * Copyright (c) 2009-2018 www.jeasyui.com. All rights reserved.
  *
@@ -135,9 +135,6 @@ var _28=$(_27).maskedbox("options");
 var _29=[9,13,35,36,37,39];
 if($.inArray(e.keyCode,_29)!=-1){
 return true;
-}
-if(e.keyCode>=96&&e.keyCode<=105){
-e.keyCode-=48;
 }
 var c=String.fromCharCode(e.keyCode);
 if(e.keyCode>=65&&e.keyCode<=90&&!e.shiftKey){

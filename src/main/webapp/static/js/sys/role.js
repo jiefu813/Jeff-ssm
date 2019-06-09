@@ -207,3 +207,39 @@ function saveGrant_on(){
         }
     });
 }
+
+//全选
+function checkAll_on() {
+    var nodes = $('#menuTree').tree('getChecked', 'unchecked');
+    if (nodes && nodes.length > 0) {
+        for (var i = 0; i < nodes.length; i++) {
+            $('#menuTree').tree('check', nodes[i].target);
+        }
+    }
+}
+
+//反选
+function checkInverse_on() {
+    var unchecknodes = $('#menuTree').tree('getChecked', 'unchecked');
+    var checknodes = $('#menuTree').tree('getChecked');
+    if (unchecknodes && unchecknodes.length > 0) {
+        for (var i = 0; i < unchecknodes.length; i++) {
+            $('#menuTree').tree('check', unchecknodes[i].target);
+        }
+    }
+    if (checknodes && checknodes.length > 0) {
+        for (var i = 0; i < checknodes.length; i++) {
+            $('#menuTree').tree('uncheck', checknodes[i].target);
+        }
+    }
+}
+
+//取消
+function uncheckAll_on() {
+    var nodes = $('#menuTree').tree('getChecked');
+    if (nodes && nodes.length > 0) {
+        for (var i = 0; i < nodes.length; i++) {
+            $('#menuTree').tree('uncheck', nodes[i].target);
+        }
+    }
+}

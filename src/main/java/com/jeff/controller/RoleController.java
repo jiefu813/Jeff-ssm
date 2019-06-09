@@ -48,6 +48,7 @@ public class RoleController {
         if (role.getName() != null && !"".equals(role.getName())) {
             wrapper.like("name", role.getName());
         }
+        wrapper.orderByAsc("seq");
         IPage<Role> selectPage = roleService.page(p, wrapper);
         return new Datagrid(selectPage.getRecords(), selectPage.getTotal());
     }

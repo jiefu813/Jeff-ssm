@@ -1,5 +1,5 @@
 /**
- * EasyUI for jQuery 1.7.0
+ * EasyUI for jQuery 1.5.4.5
  * 
  * Copyright (c) 2009-2018 www.jeasyui.com. All rights reserved.
  *
@@ -168,8 +168,7 @@
 				$.data(this, 'linkbutton', {
 					options: $.extend({}, $.fn.linkbutton.defaults, $.fn.linkbutton.parseOptions(this), options)
 				});
-				// $(this).removeAttr('disabled');
-				$(this)._propAttr('disabled', false);
+				$(this).removeAttr('disabled');
 				$(this).bind('_resize', function(e, force){
 					if ($(this).hasClass('easyui-fluid') || force){
 						setSize(this);

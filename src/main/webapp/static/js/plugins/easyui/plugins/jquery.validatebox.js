@@ -1,5 +1,5 @@
 /**
- * EasyUI for jQuery 1.7.0
+ * EasyUI for jQuery 1.5.4.5
  * 
  * Copyright (c) 2009-2018 www.jeasyui.com. All rights reserved.
  *
@@ -190,9 +190,9 @@ if(_32!=undefined){
 _33.disabled=_32;
 }
 if(_33.disabled){
-$(_31).addClass("validatebox-disabled")._propAttr("disabled",true);
+$(_31).addClass("validatebox-disabled").attr("disabled","disabled");
 }else{
-$(_31).removeClass("validatebox-disabled")._propAttr("disabled",false);
+$(_31).removeClass("validatebox-disabled").removeAttr("disabled");
 }
 };
 function _34(_35,_36){
@@ -200,9 +200,9 @@ var _37=$.data(_35,"validatebox").options;
 _37.readonly=_36==undefined?true:_36;
 if(_37.readonly||!_37.editable){
 $(_35).triggerHandler("blur.validatebox");
-$(_35).addClass("validatebox-readonly")._propAttr("readonly",true);
+$(_35).addClass("validatebox-readonly").attr("readonly","readonly");
 }else{
-$(_35).removeClass("validatebox-readonly")._propAttr("readonly",false);
+$(_35).removeClass("validatebox-readonly").removeAttr("readonly");
 }
 };
 $.fn.validatebox=function(_38,_39){

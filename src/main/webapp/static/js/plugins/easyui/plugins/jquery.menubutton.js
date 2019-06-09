@@ -1,5 +1,5 @@
 /**
- * EasyUI for jQuery 1.7.0
+ * EasyUI for jQuery 1.5.4.5
  * 
  * Copyright (c) 2009-2018 www.jeasyui.com. All rights reserved.
  *
@@ -96,7 +96,7 @@ if(_1a){
 $.extend(_1a.options,_17);
 }else{
 $.data(this,"menubutton",{options:$.extend({},$.fn.menubutton.defaults,$.fn.menubutton.parseOptions(this),_17)});
-$(this)._propAttr("disabled",false);
+$(this).removeAttr("disabled");
 }
 _1(this);
 _f(this);
