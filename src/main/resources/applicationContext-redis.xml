@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="redisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxTotal" value="200"/>
+        <property name="maxIdle" value="100"/>
+        <property name="maxWaitMillis" value="100"/>
+        <property name="testOnBorrow" value="true"/>
+    </bean>
+
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool" destroy-method="destroy">
+        <constructor-arg ref="redisPoolConfig"/>
+        <constructor-arg value="192.168.0.101"/>
+        <constructor-arg type="int" value="6379"/>
+        <constructor-arg type="int" value="2000"/>
+        <constructor-arg type="java.lang.String" value="123456"/>
+        <constructor-arg type="int" value="8"/>
+    </bean>
+
+    <bean id="redisClient" class="com.jeff.common.shiro.RedisClient">
+        <constructor-arg name="jedisPool" ref="jedisPool"/>
+        <property name="expire" value="1800000"/>
+    </bean>
+</beans>

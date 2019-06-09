@@ -21,7 +21,7 @@
             <div class="head">
                 <table>
                   <tr>
-                    <td width="300px" align="left" style="font-size: 20px;">后台管理系统</td>
+                    <td width="300px" align="left" style="font-size: 20px;">后台管理系统1</td>
                     <td></td>
                     <td width="400px" align="right">
                         <table >
