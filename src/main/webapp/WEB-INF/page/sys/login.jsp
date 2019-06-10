@@ -31,7 +31,7 @@
             <div id="large-header" class="large-header">
                 <canvas id="demo-canvas"></canvas>
                 <div class="logo_box">
-                    <h3>欢迎您1</h3>
+                    <h3>欢迎您</h3>
                     <form action="#" name="f" method="post">
                         <div class="input_outer">
                             <span class="u_user"></span>
